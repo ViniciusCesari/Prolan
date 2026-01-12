@@ -10,6 +10,24 @@
 
   gtag('config', 'AW-17757037763');
 </script>
+    <!-- Event snippet for Compra conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17757037763/KyGdCJ7n8t8bEMPJm5NC',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prolan - پروسٹیٹ کی صحت اور تندرستی</title> <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
@@ -242,4 +260,5 @@
 </body>
 
 </html>
+
 
